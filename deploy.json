@@ -83,7 +83,7 @@
                       "Key" : "ENVIRONMENT",
                       "Value" : "POC"
                     },
-                  ]
+                  ],
                 "AccessControl": "PublicRead",
                 "BucketName": { "Ref": "BucketName" },
                 "WebsiteConfiguration": { "IndexDocument": "index.html" }
