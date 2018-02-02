@@ -61,8 +61,7 @@
                 "AccessControl": "PublicRead",
                 "BucketName": { "Ref": "BucketName" },
                 "WebsiteConfiguration": { "IndexDocument": "index.html" }
-            },
-            "DeletionPolicy": "Retain"
+            }
         },
         "S3WebsiteBucketPolicy": {
             "DependsOn": [
@@ -450,7 +449,6 @@
         "S3ArtifactsBucket": {
             "Description": "Creating Amazon S3 bucket for AWS CodePipeline artifacts",
             "Type": "AWS::S3::Bucket",
-            "DeletionPolicy": "Retain",
             "Properties": {
                 "BucketName": {
                     "Fn::Sub": "serverless-app-${AWS::AccountId}-${AWS::Region}-${AppName}"
