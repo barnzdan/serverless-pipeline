@@ -58,6 +58,32 @@
         "S3Bucket": {
             "Type": "AWS::S3::Bucket",
             "Properties": {
+              "Tags" : [
+                    {
+                      "Key" : "NAME",
+                      "Value" : "SERVERLESS-SAM"
+                    },
+                    {
+                      "Key" : "PLATFORM",
+                      "Value" : "RAPID"
+                    },
+                    {
+                      "Key" : "BUSINESS_REGION",
+                      "Value" : "NORTHAMERICA"
+                    },
+                    {
+                      "Key" : "BUSINESS_UNIT",
+                      "Value" : "OPERATIONS"
+                    },
+                    {
+                      "Key" : "CLIENT",
+                      "Value" : "NONE"
+                    },
+                    {
+                      "Key" : "ENVIRONMENT",
+                      "Value" : "POC"
+                    },
+                  ]
                 "AccessControl": "PublicRead",
                 "BucketName": { "Ref": "BucketName" },
                 "WebsiteConfiguration": { "IndexDocument": "index.html" }
