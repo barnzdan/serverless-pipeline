@@ -462,12 +462,30 @@
                     "Type": "CODEPIPELINE"
                 },
                 "Tags": [
-                    {
-                        "Key": "app-name",
-                        "Value": {
-                            "Ref": "AppName"
-                        }
-                    }
+                  {
+                    "Key" : "NAME",
+                    "Value" : "SERVERLESS-SAM"
+                  },
+                  {
+                    "Key" : "PLATFORM",
+                    "Value" : "RAPID"
+                  },
+                  {
+                    "Key" : "BUSINESS_REGION",
+                    "Value" : "NORTHAMERICA"
+                  },
+                  {
+                    "Key" : "BUSINESS_UNIT",
+                    "Value" : "OPERATIONS"
+                  },
+                  {
+                    "Key" : "CLIENT",
+                    "Value" : "NONE"
+                  },
+                  {
+                    "Key" : "ENVIRONMENT",
+                    "Value" : "POC"
+                  },
                 ],
                 "TimeoutInMinutes": 5
             }
