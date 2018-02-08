@@ -526,8 +526,7 @@
                     "Fn::GetAtt": [
                         "CodePipelineTrustRole",
                         "Arn"
-                    ],
-                    "Type": "String",
+                    ]
                 },
                 "Stages": [
                     {
