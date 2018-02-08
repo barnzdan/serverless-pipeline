@@ -522,28 +522,6 @@
                 "Name": {
                     "Fn::Sub": "${AppName}-pipeline"
                 },
-                "Tags": [
-                    {
-                      "Key": "NAME",
-                      "Value": "serverless-sam"
-                    },
-                    {
-                      "Key": "BUSINESS_UNIT",
-                      "Value": "OPERATIONS"
-                    },
-                    {
-                      "Key": "BUSINESS_REGION",
-                      "Value": "NORTHAMERICA"
-                    },
-                    {
-                      "Key": "CLIENT",
-                      "Value": "NONE"
-                    },
-                    {
-                      "Key": "PLATFORM",
-                      "Value": "RAPID"
-                    }
-                ],
                 "RoleArn": {
                     "Fn::GetAtt": [
                         "CodePipelineTrustRole",
