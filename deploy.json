@@ -438,10 +438,24 @@
                 },
                 "Tags": [
                     {
-                        "Key": "app-name",
-                        "Value": {
-                            "Ref": "AppName"
-                        }
+                      "Key": "NAME",
+                      "Value": "serverless-sam"
+                    },
+                    {
+                      "Key": "BUSINESS_UNIT",
+                      "Value": "OPERATIONS"
+                    },
+                    {
+                      "Key": "BUSINESS_REGION",
+                      "Value": "NORTHAMERICA"
+                    },
+                    {
+                      "Key": "CLIENT",
+                      "Value": "NONE"
+                    },
+                    {
+                      "Key": "PLATFORM",
+                      "Value": "RAPID"
                     }
                 ],
                 "TimeoutInMinutes": 5
@@ -457,7 +471,29 @@
                 },
                 "VersioningConfiguration": {
                     "Status": "Enabled"
-                }
+                },
+                "Tags": [
+                    {
+                      "Key": "NAME",
+                      "Value": "serverless-sam"
+                    },
+                    {
+                      "Key": "BUSINESS_UNIT",
+                      "Value": "OPERATIONS"
+                    },
+                    {
+                      "Key": "BUSINESS_REGION",
+                      "Value": "NORTHAMERICA"
+                    },
+                    {
+                      "Key": "CLIENT",
+                      "Value": "NONE"
+                    },
+                    {
+                      "Key": "PLATFORM",
+                      "Value": "RAPID"
+                    }
+                ],
             }
         },
         "S3ArtifactBucketPolicy": {
@@ -509,7 +545,29 @@
                     "Fn::GetAtt": [
                         "CodePipelineTrustRole",
                         "Arn"
-                    ]
+                    ],
+                    "Tags": [
+                        {
+                          "Key": "NAME",
+                          "Value": "serverless-sam"
+                        },
+                        {
+                          "Key": "BUSINESS_UNIT",
+                          "Value": "OPERATIONS"
+                        },
+                        {
+                          "Key": "BUSINESS_REGION",
+                          "Value": "NORTHAMERICA"
+                        },
+                        {
+                          "Key": "CLIENT",
+                          "Value": "NONE"
+                        },
+                        {
+                          "Key": "PLATFORM",
+                          "Value": "RAPID"
+                        }
+                    ],
                 },
                 "Stages": [
                     {
@@ -533,16 +591,19 @@
                                 ],
                                 "Configuration": {
                                     "Repo": {
-                                        "Ref": "GitHubRepoName"
+                                        "Ref": "GitHubRepoName",
+                                        "Value": "serverless-pipeline"
                                     },
                                     "Branch": {
-                                        "Ref": "GitHubRepoBranch"
+                                        "Ref": "GitHubRepoBranch",
+                                        "Value": "master"
                                     },
                                     "OAuthToken": {
                                         "Ref": "GitHubToken"
                                     },
                                     "Owner": {
-                                        "Ref": "GitHubUser"
+                                        "Ref": "GitHubUser",
+                                        "Value": "barnzdan"
                                     }
                                 },
                                 "RunOrder": 1
