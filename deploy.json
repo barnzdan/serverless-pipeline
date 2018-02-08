@@ -85,7 +85,7 @@
                             "Action": [
                                 "s3:GetObject"
                             ],
-                            "Effect": "Allow",
+                            "Effect": "Deny",
                             "Resource": {
                                 "Fn::Sub": "arn:aws:s3:::${S3Bucket}/*"
                             },
