@@ -8,7 +8,8 @@
             "MinLength": "1",
             "MaxLength": "80",
             "AllowedPattern": "[A-Za-z0-9-]+",
-            "ConstraintDescription": "Malformed input parameter. AppName must only contain upper and lower case letters, numbers, and -."
+            "ConstraintDescription": "Malformed input parameter. AppName must only contain upper and lower case letters, numbers, and -.",
+            "Default": "serverless-sam"
         },
         "BucketName": {
           "Description": "Name of the new S3 Bucket to Host Site",
@@ -37,7 +38,8 @@
         },
         "GitHubRepoName": {
             "Type": "String",
-            "Description": "The GitHub repo name"
+            "Description": "The GitHub repo name",
+            "Default": "serverless-pipeline"
         },
         "GitHubRepoBranch": {
             "Type": "String",
@@ -46,7 +48,8 @@
         },
         "GitHubUser": {
             "Type": "String",
-            "Description": "GitHub UserName. This username must have access to the GitHubToken."
+            "Description": "GitHub UserName. This username must have access to the GitHubToken.",
+            "Default": "barnzdan"
         },
         "GitHubToken": {
             "NoEcho": true,
